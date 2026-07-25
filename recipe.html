@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>BiteQuest | Recipe</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="container navbar-container">
+
+            <a href="index.html"
+               class="logo">
+
+                🍳 BiteQuest
+
+            </a>
+
+            <nav>
+
+                <ul class="nav-links">
+
+                    <li>
+
+                        <a href="index.html">
+
+                            Home
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="favourites.html">
+
+                            Favourites
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="results.html">
+
+                            Results
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= RECIPE ================= -->
+
+    <main>
+
+    <section class="recipe-page">
+
+        <div class="container">
+
+            <button
+                id="backButton"
+                class="back-button">
+
+                ← Back to Results
+
+            </button>
+
+            <div class="recipe-layout">
+
+                <!-- IMAGE -->
+
+                <div class="recipe-image-section">
+
+                    <img
+                        id="recipeImage"
+                        class="recipe-image"
+                        alt="Recipe Image">
+
+                </div>
+
+                <!-- DETAILS -->
+
+                <div class="recipe-info">
+
+                    <h1 id="recipeName">
+
+                        Loading Recipe...
+
+                    </h1>
+
+                    <div class="recipe-meta">
+
+                        <span
+                            id="recipeCategory"
+                            class="badge">
+
+                        </span>
+
+                        <span
+                            id="recipeArea"
+                            class="badge">
+
+                        </span>
+
+                    </div>
+
+                    <button
+                        id="saveFavourite"
+                        class="primary-button"
+                        type="button">
+
+                        🤍 Save Recipe
+
+                    </button>
+
+                    <a
+                        id="youtubeLink"
+                        class="youtube-button"
+                        href="#"
+                        target="_blank">
+
+                        ▶ Watch on YouTube
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- INGREDIENTS -->
+
+            <section class="ingredients-section">
+
+                <h2>
+
+                    🥕 Ingredients
+
+                </h2>
+
+                <div
+                    id="ingredientsList"
+                    class="ingredients-grid">
+
+                </div>
+
+            </section>
+
+            <!-- INSTRUCTIONS -->
+
+            <section class="instructions-section">
+
+                <h2>
+
+                    👨‍🍳 Instructions
+
+                </h2>
+
+                <div
+                    id="recipeInstructions"
+                    class="steps-container">
+
+                    <p>
+
+                        Loading...
+
+                    </p>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <p>
+
+                ©BiteQuest • Built as a college project
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="js/api.js"></script>
+    <script src="js/recipe.js"></script>
+
+</body>
+</html>

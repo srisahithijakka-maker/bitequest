@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>BiteQuest | Recipe Results</title>
+
+    <link rel="stylesheet"
+        href="css/style.css">
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="container navbar-container">
+
+            <a href="index.html" class="logo">
+                🍳 BiteQuest
+            </a>
+
+            <nav>
+
+                <ul class="nav-links">
+
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="favourites.html">Favourites</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= SEARCH SUMMARY ================= -->
+
+    <section class="results-header">
+
+        <div class="container">
+
+            <h1>
+
+                Matching Recipes
+
+            </h1>
+
+            <p>
+
+                Recipes are ranked by how many of your ingredients they already use.
+
+            </p>
+
+            <div id="searchedIngredients"
+                class="searched-ingredients">
+
+                <!-- Filled using JavaScript -->
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= RESULTS ================= -->
+
+    <main>
+
+        <section class="results-section">
+
+            <div class="container">
+
+                <!-- Loading -->
+
+                <div id="loadingMessage"
+                    class="loading-message">
+
+                    Finding recipes...
+
+                </div>
+
+
+                <!-- No Results -->
+
+                <div id="noResults"
+                    class="no-results"
+                    style="display:none;">
+
+                    <h2>
+
+                        No recipes found
+
+                    </h2>
+
+                    <p>
+
+                        Try using different ingredients.
+
+                    </p>
+
+                    <a href="index.html">
+
+                        ← Back to Search
+
+                    </a>
+
+                </div>
+
+
+                <!-- Recipe Cards -->
+
+                <div id="resultsContainer"
+                    class="results-grid">
+
+                    <!-- JavaScript creates recipe cards here -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <p>
+
+                ©BiteQuest • Built as a college project
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/api.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/results.js"></script>
+
+</body>
+
+</html>

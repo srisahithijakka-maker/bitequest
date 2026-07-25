@@ -1,149 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BiteQuest — Cook Smart. Waste Less. Eat Fresh.</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BiteQuest | Find Recipes Using Your Ingredients</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
 
-  <!-- ===== NAVBAR ===== -->
-  <header class="navbar">
-    <div class="container navbar-inner">
-      <a href="#" class="logo">
-        🍽️ BiteQuest
-      </a>
-      <nav class="nav-links">
-        <a href="#features">Features</a>
-        <a href="#recipes">Recipes</a>
-        <a href="#" class="btn-nav">Get Started</a>
-      </nav>
-      <!-- Hamburger for mobile -->
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-    <!-- Mobile dropdown -->
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="#features">Features</a>
-      <a href="#recipes">Recipes</a>
-      <a href="#">Get Started</a>
-    </div>
-  </header>
+    <!-- ================= NAVBAR ================= -->
 
-  <main>
+    <header class="navbar">
 
-    <!-- ===== HERO ===== -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <h1 class="hero-title">
-            Find recipes using ingredients<br />
-            <span class="accent-orange">you already have.</span>
-          </h1>
-          <p class="hero-subtitle">
-            Enter ingredients available in your kitchen and discover meals you can prepare right now.
-          </p>
+        <div class="container navbar-container">
 
-          <!-- Search bar -->
-          <div class="search-box">
-            <input
-              type="text"
-              id="ingredientInput"
-              class="search-input"
-              placeholder="e.g. eggs, paneer, rice..."
-              autocomplete="off"
-            />
-            <button class="search-btn" id="searchBtn">Find Recipes</button>
-          </div>
+            <a href="index.html" class="logo">
+                🍳 BiteQuest
+            </a>
 
-          <!-- Tag pills — clicking one fills the search input -->
-          <div class="search-tags">
-            <span class="tag-label">Try:</span>
-            <button class="tag-pill" data-ingredient="Egg">🥚 Egg</button>
-            <button class="tag-pill" data-ingredient="Paneer">🧀 Paneer</button>
-            <button class="tag-pill" data-ingredient="Chicken">🍗 Chicken</button>
-            <button class="tag-pill" data-ingredient="Pasta">🍝 Pasta</button>
-            <button class="tag-pill" data-ingredient="Rice">🍚 Rice</button>
-          </div>
-        </div>        
-      </div>
-    </section>
+            <nav>
 
-    <!-- ===== POPULAR RECIPES ===== -->
-    <section class="recipes-section" id="recipes">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Popular Recipes</h2>
-          <p class="section-subtitle">Quick ideas to get you started</p>
+                <ul class="nav-links">
+
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="favourites.html">Favourites</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
         </div>
 
-        <div class="recipes-grid" id="recipesGrid">
-          <!-- Cards are injected by JavaScript -->
-        </div>
-      </div>
-    </section>
+    </header>
 
-    <!-- ===== FEATURES ===== -->
-    <section class="features-section" id="features">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Features</h2>
-          <p class="section-subtitle">Everything you need to cook smarter at home</p>
-        </div>
 
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon">🔍</div>
-            <h3 class="feature-title">Ingredient Search</h3>
-            <p class="feature-desc">
-              Type in whatever's in your fridge or pantry. BiteQuest finds recipes you can make right now — and shows what's missing for others.
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="container hero-container">
+
+                <!-- LEFT SIDE -->
+
+                <div class="hero-content">
+
+                    <h1>
+                        Find recipes using ingredients
+                        you already have.
+                    </h1>
+
+                    <p>
+                        Enter the ingredients available in your kitchen and discover
+                        recipes you can cook without unnecessary grocery trips.
+                    </p>
+
+
+                    <!-- Search -->
+
+                    <form id="searchForm" class="search-form">
+
+                        <input
+                            type="text"
+                            id="ingredientInput"
+                            placeholder="Example: egg, onion, tomato">
+
+                        <button type="submit">
+
+                            Find Matching Recipes
+
+                        </button>
+
+                    </form>
+
+
+                    <!-- Quick Search -->
+
+                    <div class="quick-search">
+
+                        <span>Quick Search</span>
+
+                        <button class="quick-item" data-value="egg">
+                            Egg
+                        </button>
+
+                        <button class="quick-item" data-value="rice">
+                            Rice
+                        </button>
+
+                        <button class="quick-item" data-value="paneer">
+                            Paneer
+                        </button>
+
+                        <button class="quick-item" data-value="milk">
+                            Milk
+                        </button>
+
+                        <button class="quick-item" data-value="chicken">
+                            Chicken
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RIGHT SIDE -->
+
+                <aside class="pantry">
+
+                    <h2>
+
+                        My Pantry
+
+                    </h2>
+
+
+                    <ul id="pantryList">
+
+                        <li class="empty">
+
+                            Your pantry is empty.
+
+                        </li>
+
+                    </ul>
+
+
+                    <div class="pantry-buttons">
+
+                        <button id="addIngredientBtn">
+
+                            + Add Ingredient
+
+                        </button>
+
+                        <button id="searchPantryBtn">
+
+                            Search Using Pantry
+
+                        </button>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <p>
+
+                © BiteQuest • Built as a college project
+
             </p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">📦</div>
-            <h3 class="feature-title">Pantry Tracking</h3>
-            <p class="feature-desc">
-              Save your pantry once and search from it any time. No need to re-enter the same ingredients every visit.
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">⏰</div>
-            <h3 class="feature-title">Expiry Alerts</h3>
-            <p class="feature-desc">
-              Set expiry dates on your pantry items. BiteQuest reminds you before food goes to waste so you cook it while it's fresh.
-            </p>
-          </div>
+
         </div>
-      </div>
-    </section>
 
-  </main>
+    </footer>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <span class="logo">🍽️ BiteQuest</span>
-        <p class="footer-tagline">Cook Smart. Waste Less. Eat Fresh.</p>
-      </div>
-      <nav class="footer-links">
-        <a href="#">About</a>
-        <a href="#recipes">Recipes</a>
-        <a href="#features">Features</a>
-        <a href="#">Contact</a>
-      </nav>
-      <p class="footer-copy">© 2025 BiteQuest. Cook Smart. Waste Less. Eat Fresh.</p>
-    </div>
-  </footer>
 
-  <script src="js/recipes.js"></script>
-  <script src="js/main.js"></script>
+    <script src="js/pantry.js"></script>
+    <script src="js/main.js"></script>
+
 </body>
+
 </html>
