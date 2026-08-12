@@ -1,0 +1,45 @@
+{
+	"info": {
+		"_postman_id": "b1cefc59-4e3f-4b3e-9d7a-1f6b8c2a5d10",
+		"name": "BiteQuest Backend",
+		"description": "REST API collection for the BiteQuest Spring Boot backend. The variable baseUrl points to the running backend.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"alice\",\n    \"email\": \"alice@example.com\",\n    \"password\": \"secret123\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/users/register",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				},
+				"description": "Creates a new user. Password is stored as a BCrypt hash. Returns 201 Created with the user (no password)."
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
